@@ -39,9 +39,9 @@ Semua akun demo menggunakan password `password`.
 | Username | Email | Role | Status |
 |---|---|---|---|
 | `admin` | `admin@ipms.test` | Admin | Approved |
-| `project.manager` | `project.manager@ipms.test` | User | Approved |
-| `project.coordinator` | `project.coordinator@ipms.test` | User | Approved |
-| `pending.user` | `pending.user@ipms.test` | User | Pending |
+| `user1` | `project.manager@ipms.test` | User | Approved |
+| `user2` | `project.coordinator@ipms.test` | User | Approved |
+| `user3` | `pending.user@ipms.test` | User | Pending |
 
 ## Seeder
 
