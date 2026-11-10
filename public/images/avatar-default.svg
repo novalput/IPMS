@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Default user avatar</title>
+  <desc id="desc">Abstract blue profile avatar for IPMS users</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b3d72"/>
+      <stop offset="1" stop-color="#1db5e6"/>
+    </linearGradient>
+  </defs>
+  <circle cx="128" cy="128" r="128" fill="url(#background)"/>
+  <circle cx="128" cy="96" r="43" fill="#e8f7fc"/>
+  <path d="M47 227c8-48 38-75 81-75s73 27 81 75" fill="#e8f7fc"/>
+  <circle cx="128" cy="128" r="116" fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="4"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 180" role="img" aria-labelledby="title desc">
+  <title id="title">Integrated Project Management System</title>
+  <desc id="desc">IPMS geometric project management logo</desc>
+  <defs>
+    <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#18b6e8"/>
+      <stop offset="1" stop-color="#1455a0"/>
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="160" height="160" rx="38" fill="url(#mark)"/>
+  <path d="M47 119V61h18v58H47Zm30 0V61h31c18 0 29 10 29 26s-11 26-29 26H95v6H77Zm18-21h11c8 0 13-4 13-11s-5-11-13-11H95v22Z" fill="#fff"/>
+  <path d="M45 138h91" stroke="#9be7f8" stroke-width="8" stroke-linecap="round"/>
+  <text x="202" y="92" fill="#123d70" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" letter-spacing="1">IPMS</text>
+  <text x="204" y="128" fill="#4d6b87" font-family="Arial, Helvetica, sans-serif" font-size="17" letter-spacing="2">PROJECT MANAGEMENT SYSTEM</text>
+</svg>

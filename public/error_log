@@ -1,0 +1,330 @@
+[02-Sep-2025 04:12:22 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:14:14 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:14:14 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:14:19 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:14:59 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:15:09 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:15:11 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:16:02 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:16:21 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:20:03 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:22:26 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:26:18 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:26:21 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:28:51 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:28:57 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:28:59 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:28:59 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:30:16 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:30:21 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:31:31 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:32:22 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:32:36 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:35:50 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:36:48 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:36:52 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:36:53 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:41:26 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:47:33 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:47:33 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:47:54 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 04:48:36 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:05:26 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:06:50 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:08:03 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:08:31 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:20:03 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:23:39 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:25:38 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:25:47 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:26:02 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:38:56 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:38:56 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:38:58 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:39:02 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:39:03 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:39:03 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:39:04 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:39:05 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:39:06 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:39:07 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:39:08 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:39:08 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:39:09 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:40:23 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:41:12 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:42:21 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:43:20 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:57:49 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 05:59:06 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 06:01:13 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 06:01:54 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 06:02:07 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 06:17:58 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 06:18:04 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 06:19:00 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25
+[02-Sep-2025 06:19:10 UTC] PHP Fatal error:  Uncaught Error: Class "ComposerAutoloaderInit88970a0117c062eed55fa8728fc43833" not found in /home/aptnpcom/public_html/vendor/autoload.php:25
+Stack trace:
+#0 /home/aptnpcom/public_html/public/index.php(14): require()
+#1 {main}
+  thrown in /home/aptnpcom/public_html/vendor/autoload.php on line 25

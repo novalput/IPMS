@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+    <meta charset="utf-8">
+    <title>{{ $template_name }}</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotPromptForConvert/>
+            <w:DoNotShowRevisions/>
+            <w:DoNotPrintRevisions/>
+            <w:DoNotShowMarkup/>
+            <w:DoNotShowComments/>
+            <w:DoNotShowInsertionsAndDeletions/>
+            <w:DoNotShowPropertyChanges/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+        /* Set page margins untuk Word */
+        @page {
+            size: A4;
+            margin: 2.54cm 2.54cm 2.54cm 2.54cm; /* 1 inch margins untuk Word */
+        }
+        
+        /* Body dengan padding untuk menghindari mepet */
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            line-height: 1.4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Word-specific margin override */
+        div.WordSection1 {
+            page: WordSection1;
+            margin: 2.54cm 2.54cm 2.54cm 2.54cm; /* 1 inch margins */
+            padding: 0; /* Tidak perlu padding tambahan */
+        }
+        
+        /* Header Layout - Improved untuk Word */
+        .header-with-logos {
+            display: table;
+            width: 100%;
+            border-bottom: 2px solid #00AEEF;
+            padding: 20px 0 15px 0;
+            margin-bottom: 20px;
+            table-layout: fixed;
+            border-spacing: 0;
+            min-height: 120px;
+        }
+
+        .header-row {
+            display: table-row;
+            height: 120px;
+        }
+
+        .logo-left, .header-center, .logo-right {
+            display: table-cell;
+            vertical-align: middle;
+            height: 120px;
+            padding: 10px 5px;
+        }
+
+        .logo-left, .logo-right {
+            width: 140px;
+            text-align: center;
+        }
+
+        .header-center {
+            width: calc(100% - 280px);
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        /* Logo Styling - ukuran spesifik untuk Word */
+        .logo-img {
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+        }
+
+        /* IPMS NP Logo - h=0,8cm w=3,95cm */
+        .logo-img.ipms-np {
+            height: 0.8cm;
+            width: 3.95cm;
+        }
+
+        /* IPMS Partner Logo - h=1cm w=6,87cm */
+        .logo-img.ipms-npc {
+            height: 1cm;
+            width: 6.87cm;
+        }
+
+        /* Hutama Karya tanpa slogan - h=1cm w=2,12cm */
+        .logo-img.hutama-no-slogan {
+            height: 1cm;
+            width: 2.12cm;
+        }
+
+        /* Hutama Karya dengan slogan - h=1,5cm w=2,09cm */
+        .logo-img.hutama-with-slogan {
+            height: 1.5cm;
+            width: 2.09cm;
+        }
+
+        .logo-placeholder {
+            width: 120px;
+            height: 80px;
+            background: #f0f0f0;
+            display: inline-block;
+            text-align: center;
+            line-height: 20px;
+            font-size: 8px;
+            color: #666;
+            border: 1px dashed #ccc;
+            vertical-align: middle;
+            padding: 10px 5px;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        /* Header Text Styling - sama dengan PDF */
+        .header-center h1 {
+            color: #000080;
+            font-size: 18px;
+            margin: 0 0 8px 0;
+            line-height: 1.1;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .header-center h2 {
+            color: #000060;
+            font-size: 14px;
+            margin: 0 0 8px 0;
+            line-height: 1.1;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .header-center h3 {
+            color: #000060;
+            font-size: 12px;
+            margin: 0;
+            line-height: 1.1;
+            font-weight: 500;
+        }
+        
+        .project-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .project-info h3 {
+            margin-top: 0;
+            color: #333;
+            font-size: 14px;
+        }
+        
+        .project-info p {
+            margin: 5px 0;
+            color: #555;
+            font-size: 10px;
+        }
+        
+        .period-section {
+            margin-bottom: 25px;
+        }
+        
+        .period-title {
+            background: #00AEEF;
+            color: white;
+            padding: 8px 12px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            page-break-before: always;
+        }
+        
+        /* Khusus periode pertama, jangan page break */
+        .period-title.first-period {
+            page-break-before: auto;
+        }
+        
+        .section-title {
+            color: #333;
+            font-size: 12px;
+            font-weight: bold;
+            margin: 15px 0 8px 0;
+            padding-bottom: 3px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 12px;
+            font-size: 9px;
+            /* Untuk Word compatibility */
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 4px;
+            text-align: left;
+            vertical-align: top;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            /* Word specific */
+            mso-line-height-rule: exactly;
+        }
+        
+        table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            color: #333;
+            font-size: 9px;
+        }
+        
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .no-data {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            padding: 15px;
+            font-size: 11px;
+        }
+        
+        .text-center { text-align: center; }
+        .formula-row { font-size: 7px; color: #002e8f; }
+        
+        /* Responsive column widths - sama seperti PDF */
+        .col-no { width: 4%; }
+        .col-desc { width: 25%; }
+        .col-weight { width: 8%; }
+        .col-percent { width: 7%; }
+        .col-status { width: 8%; }
+        .col-category { width: 12%; }
+        .col-doc-num { width: 20%; }
+        .col-doc-name { width: 30%; }
+        .col-material { width: 20%; }
+        .col-proc-step { width: 11%; }
+        .col-location { width: 15%; }
+        .col-achievement { width: 30%; }
+        .col-plan { width: 25%; }
+        .col-issue-name { width: 18%; }
+        .col-equipment { width: 15%; }
+        .col-description { width: 30%; }
+        
+        /* Status badges - sama seperti PDF */
+        .status-badge {
+            padding: 1px 4px;
+            border-radius: 2px;
+            font-size: 7px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        .status-ongoing { background: #fff3cd; color: #856404; }
+        .status-done { background: #d4edda; color: #155724; }
+        .status-delayed { background: #f8d7da; color: #721c24; }
+        
+        /* Scope titles untuk activities */
+        .scope-title {
+            margin: 8px 0 4px 0;
+            color: #333;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        
+        /* Period description */
+        .period-description {
+            font-size: 11px;
+            margin: 5px 0;
+        }
+        
+        /* Approval table styles - DIPERBAIKI */
+        .approval-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0 20px 0;
+            font-size: 11px;
+            page-break-inside: avoid;
+            border: 1px solid #000;
+        }
+
+        .approval-table th, .approval-table td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 11px;
+        }
+
+        .approval-table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            height: 30px;
+        }
+
+        .approval-table .position-row {
+            height: 30px;
+            font-style: italic;
+            color: #666;
+            font-size: 10px;
+        }
+
+        .approval-table .signature-row {
+            height: 80px;
+            background-color: #fafafa;
+        }
+
+        .approval-table .name-row {
+            height: 30px;
+            font-weight: bold;
+            font-size: 10px;
+        }
+
+        /* Approval table structure yang benar */
+        .approval-table .col-1 {
+            width: 16.66%;
+        }
+
+        .approval-table .col-2-3 {
+            width: 33.33%;
+        }
+
+        .approval-table .col-4-6 {
+            width: 50%;
+        }
+        
+        /* Word-specific page settings */
+        @page WordSection1 {
+            size: 21.0cm 29.7cm; /* A4 */
+            margin: 2.54cm 2.54cm 2.54cm 2.54cm; /* 1 inch margins */
+            mso-header-margin: 2.54cm;
+            mso-footer-margin: 2.54cm;
+            mso-paper-source: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Word Section Start -->
+    <div class="WordSection1">
+        <!-- Header dengan Logo -->
+        <div class="header-with-logos">
+            <div class="header-row">
+                <!-- Logo IPMS (Always Show) -->
+                <div class="logo-left">
+                    @if(isset($logo_config['ipms_logo_path']) && file_exists($logo_config['ipms_logo_path']))
+                        <img src="data:image/png;base64,{{ base64_encode(file_get_contents($logo_config['ipms_logo_path'])) }}"
+                             alt="IPMS Logo"
+                             style="height:0.8cm;width:3.95cm;object-fit:contain;display:block;margin:0 auto;">
+                    @else
+                        <div class="logo-placeholder">IPMS<br>Logo</div>
+                    @endif
+                </div>
+
+                <!-- Title Center -->
+                <div class="header-center">
+                    <h1>Integrated Project Management System</h1>
+                    @if($logo_config['show_collaborator_logo'])
+                        <h2>
+                            @if($logo_config['collaborator_name'] === 'IPMS Partner')
+                                Integrated Project Management System CONSTRUCTION
+                            @elseif($logo_config['collaborator_name'] === 'PT Hutama Karya')
+                                Integrated Project Management System - PT HUTAMA KARYA (PERSERO)
+                            @endif
+                        </h2>
+                    @endif
+                    <h3>{{ $template_name }}</h3>
+                </div>
+
+                <!-- Logo Collaborator (Conditional) -->
+                <div class="logo-right">
+                    @if($logo_config['show_collaborator_logo'] && isset($logo_config['collaborator_logo_path']) && file_exists($logo_config['collaborator_logo_path']))
+                        @php
+                            $style = '';
+                            if($logo_config['collaborator_name'] === 'IPMS Partner') {
+                                $style = 'height:1cm;width:6.87cm;';
+                            } elseif($logo_config['collaborator_name'] === 'PT Hutama Karya') {
+                                if(strpos($logo_config['collaborator_logo_path'], 'Hutama_Karya.png') !== false) {
+                                    $style = 'height:1cm;width:2.12cm;';
+                                } else {
+                                    $style = 'height:1.5cm;width:2.09cm;';
+                                }
+                            }
+                        @endphp
+                        <img src="data:image/png;base64,{{ base64_encode(file_get_contents($logo_config['collaborator_logo_path'])) }}"
+                             alt="{{ $logo_config['collaborator_name'] }} Logo"
+                             style="{{ $style }}object-fit:contain;display:block;margin:0 auto;">
+                    @else
+                        <div class="logo-placeholder">{{ $logo_config['collaborator_name'] ?? '' }}<br>Logo</div>
+                    @endif
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Info -->
+        <div class="project-info">
+            <h3>INFORMASI PROYEK</h3>
+            <p><strong>Nama Proyek:</strong> {{ $project->name }}</p>
+            <p><strong>Deskripsi:</strong> {{ $project->description ?: 'Tidak ada deskripsi' }}</p>
+            @if($project->collaborator)
+                <p><strong>Kolaborator:</strong> {{ $project->collaborator_label }}</p>
+            @endif
+            <p><strong>Tanggal Dibuat:</strong> {{ $generated_at }}</p>
+            <p><strong>Periode yang Diekspor:</strong> 
+                @foreach($periods as $period)
+                    {{ $period->name }}@if(!$loop->last), @endif
+                @endforeach
+            </p>
+        </div>
+
+        <!-- Content for each period -->
+        @foreach($periods as $period)
+            <div class="period-section">
+                <div class="period-title {{ $loop->first ? 'first-period' : '' }}">
+                    PERIODE: {{ $period->name }}
+                    @if($period->start_date && $period->end_date)
+                        ({{ $period->start_date }} - {{ $period->end_date }})
+                    @endif
+                </div>
+
+                <!-- Description -->
+                @if(in_array('description', $sections))
+                    <div class="section-title">Deskripsi Periode</div>
+                    <p class="period-description">{{ $period->description ?: 'Tidak ada deskripsi untuk periode ini.' }}</p>
+                @endif
+
+                <!-- EPC Progress -->
+                @if(in_array('epc', $sections))
+                    <div class="section-title">EPC PROGRESS</div>
+                    @if($period->epc->count() > 0)
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th rowspan="3" class="col-no">No</th>
+                                    <th rowspan="3" class="col-desc">Deskripsi</th>
+                                    <th rowspan="2" class="col-weight">Weight Factor</th>
+                                    <th colspan="3" class="text-center">Cumulative Last</th>
+                                    <th colspan="2" class="text-center">This Period</th>
+                                    <th colspan="3" class="text-center">Cumulative Now</th>
+                                    <th rowspan="3" class="col-status">Status</th>
+                                </tr>
+                                <tr>
+                                    <th class="col-percent">Plan</th>
+                                    <th class="col-percent">Actual</th>
+                                    <th class="col-percent">Variance</th>
+                                    <th class="col-percent">Plan</th>
+                                    <th class="col-percent">Actual</th>
+                                    <th class="col-percent">Plan</th>
+                                    <th class="col-percent">Actual</th>
+                                    <th class="col-percent">Variance</th>
+                                </tr>
+                                <tr class="formula-row">
+                                    <th>A</th>
+                                    <th>B</th><th>C</th><th>C-B</th>
+                                    <th>D-B</th><th>E-C</th>
+                                    <th>D</th><th>E</th><th>E-D</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($period->epc as $epc)
+                                    <tr>
+                                        <td class="text-center">{{ $loop->iteration }}</td>
+                                        <td>{{ $epc->description }}</td>
+                                        <td class="text-center">{{ $epc->weight_factor }}</td>
+                                        <td class="text-center">{{ number_format($epc->cum_last_plan ?? 0, 1) }}%</td>
+                                        <td class="text-center">{{ number_format($epc->cum_last_actual ?? 0, 1) }}%</td>
+                                        <td class="text-center">{{ number_format($epc->cum_last_variance ?? 0, 1) }}%</td>
+                                        <td class="text-center">{{ number_format($epc->this_plan ?? 0, 1) }}%</td>
+                                        <td class="text-center">{{ number_format($epc->this_actual ?? 0, 1) }}%</td>
+                                        <td class="text-center">{{ number_format($epc->cum_now_plan ?? 0, 1) }}%</td>
+                                        <td class="text-center">{{ number_format($epc->cum_now_actual ?? 0, 1) }}%</td>
+                                        <td class="text-center">{{ number_format($epc->cum_now_variance ?? 0, 1) }}%</td>
+                                        <td class="text-center">
+                                            <span class="status-badge status-{{ $epc->status }}">
+                                                {{ ucfirst($epc->status) }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    @else
+                        <div class="no-data">Tidak ada data EPC untuk periode ini</div>
+                    @endif
+                @endif
+
+                <!-- Engineering -->
+                @if(in_array('engineering', $sections))
+                    <div class="section-title">ENGINEERING DOCUMENTS</div>
+                    @if($period->engineerings->count() > 0)
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="col-no">No</th>
+                                    <th class="col-category">Kategori</th>
+                                    <th class="col-category">Subkategori</th>
+                                    <th class="col-weight">Sub</th>
+                                    <th class="col-doc-num">Nomor Dokumen</th>
+                                    <th class="col-doc-name">Document Name</th>
+                                    <th class="col-status">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($period->engineerings as $eng)
+                                    <tr>
+                                        <td class="text-center">{{ $loop->iteration }}</td>
+                                        <td>{{ $eng->kategori ?: '-' }}</td>
+                                        <td>{{ $eng->subkategori ?: '-' }}</td>
+                                        <td>{{ $eng->sub ?: '-' }}</td>
+                                        <td>
+                                            {{ collect([$eng->doc_part1, $eng->doc_part2, $eng->doc_part3, $eng->doc_part4, $eng->doc_part5, $eng->doc_part6])->filter()->implode('-') }}
+                                        </td>
+                                        <td>{{ $eng->document_name ?: 'Engineering Document' }}</td>
+                                        <td class="text-center">{{ $eng->approval_status }}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    @else
+                        <div class="no-data">Tidak ada data engineering untuk periode ini</div>
+                    @endif
+                @endif
+
+                <!-- Procurement Material -->
+                @if(in_array('procurement_material', $sections))
+                    <div class="section-title">PROCUREMENT MATERIAL</div>
+                    @if($period->procurementMaterials->count() > 0)
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="col-material">Material Name</th>
+                                    <th class="col-proc-step">PO Issued</th>
+                                    <th class="col-proc-step">Submit TPG</th>
+                                    <th class="col-proc-step">Approve TPG</th>
+                                    <th class="col-proc-step">Manufacture</th>
+                                    <th class="col-proc-step">FAT</th>
+                                    <th class="col-proc-step">Delivery</th>
+                                    <th class="col-proc-step">On Site</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($period->procurementMaterials as $material)
+                                    <tr>
+                                        <td>{{ $material->material_name }}</td>
+                                        <td class="text-center">{{ $material->po_issued }}</td>
+                                        <td class="text-center">{{ $material->submit_tpg }}</td>
+                                        <td class="text-center">{{ $material->approve_tpg }}</td>
+                                        <td class="text-center">{{ $material->manufacture }}</td>
+                                        <td class="text-center">{{ $material->fat }}</td>
+                                        <td class="text-center">{{ $material->delivery }}</td>
+                                        <td class="text-center">{{ $material->material_on_site }}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    @else
+                        <div class="no-data">Tidak ada data procurement material untuk periode ini</div>
+                    @endif
+                @endif
+
+                <!-- Procurement Service -->
+                @if(in_array('procurement_service', $sections))
+                    <div class="section-title">PROCUREMENT SERVICE</div>
+                    @if($period->procurementServices->count() > 0)
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th style="width: 30%;">Service Name</th>
+                                    <th style="width: 20%;">PO Issued</th>
+                                    <th style="width: 20%;">Mobilization</th>
+                                    <th style="width: 20%;">Field Work</th>
+                                    <th style="width: 10%;">Reporting</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($period->procurementServices as $service)
+                                    <tr>
+                                        <td>{{ $service->service_name }}</td>
+                                        <td class="text-center">{{ $service->po_issued }}</td>
+                                        <td class="text-center">{{ $service->mobilization }}</td>
+                                        <td class="text-center">{{ $service->field_work }}</td>
+                                        <td class="text-center">{{ $service->reporting }}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    @else
+                        <div class="no-data">Tidak ada data procurement service untuk periode ini</div>
+                    @endif
+                @endif
+
+                <!-- Construction -->
+                @if(in_array('construction', $sections))
+                    <div class="section-title">CONSTRUCTION PROGRESS</div>
+                    @if($period->constructions->count() > 0)
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th rowspan="3" class="col-no">No</th>
+                                    <th rowspan="3" class="col-desc">Deskripsi</th>
+                                    <th rowspan="2" class="col-weight">Weight Factor</th>
+                                    <th colspan="3" class="text-center">Cumulative Last</th>
+                                    <th colspan="2" class="text-center">This Period</th>
+                                    <th colspan="3" class="text-center">Cumulative Now</th>
+                                    <th rowspan="3" class="col-status">Status</th>
+                                </tr>
+                                <tr>
+                                    <th class="col-percent">Plan</th>
+                                    <th class="col-percent">Actual</th>
+                                    <th class="col-percent">Variance</th>
+                                    <th class="col-percent">Plan</th>
+                                    <th class="col-percent">Actual</th>
+                                    <th class="col-percent">Plan</th>
+                                    <th class="col-percent">Actual</th>
+                                    <th class="col-percent">Variance</th>
+                                </tr>
+                                <tr class="formula-row">
+                                    <th>A</th>
+                                    <th>B</th><th>C</th><th>C-B</th>
+                                    <th>D-B</th><th>E-C</th>
+                                    <th>D</th><th>E</th><th>E-D</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($period->constructions as $con)
+                                    <tr>
+                                        <td class="text-center">{{ $loop->iteration }}</td>
+                                        <td>{{ $con->description }}</td>
+                                        <td class="text-center">{{ $con->weight_factor }}</td>
+                                        <td class="text-center">{{ number_format($con->cum_last_plan ?? 0, 1) }}%</td>
+                                        <td class="text-center">{{ number_format($con->cum_last_actual ?? 0, 1) }}%</td>
+                                        <td class="text-center">{{ number_format($con->cum_last_variance ?? 0, 1) }}%</td>
+                                        <td class="text-center">{{ number_format($con->this_plan ?? 0, 1) }}%</td>
+                                        <td class="text-center">{{ number_format($con->this_actual ?? 0, 1) }}%</td>
+                                        <td class="text-center">{{ number_format($con->cum_now_plan ?? 0, 1) }}%</td>
+                                        <td class="text-center">{{ number_format($con->cum_now_actual ?? 0, 1) }}%</td>
+                                        <td class="text-center">{{ number_format($con->cum_now_variance ?? 0, 1) }}%</td>
+                                        <td class="text-center">
+                                            <span class="status-badge status-{{ $con->status }}">
+                                                {{ ucfirst($con->status) }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    @else
+                        <div class="no-data">Tidak ada data construction untuk periode ini</div>
+                    @endif
+                @endif
+
+                <!-- Activities -->
+                @if(in_array('activities', $sections))
+                    <div class="section-title">ACTIVITIES</div>
+                    @if($period->activities->count() > 0)
+                        @php $activities = $period->activities->groupBy('scope') @endphp
+                        @foreach($activities as $scope => $scopeActivities)
+                            <div class="scope-title">Scope {{ $scope }}</div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="col-no">No</th>
+                                        <th class="col-location">Lokasi</th>
+                                        <th class="col-achievement">Pencapaian</th>
+                                        <th class="col-percent">Progress</th>
+                                        <th class="col-plan">Rencana</th>
+                                        <th class="col-status">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($scopeActivities as $activity)
+                                        <tr>
+                                            <td class="text-center">{{ $loop->iteration }}</td>
+                                            <td>{{ $activity->location }}</td>
+                                            <td>{{ $activity->achievement_this_week }}</td>
+                                            <td class="text-center">{{ $activity->progress }}%</td>
+                                            <td>{{ $activity->plan_next_week }}</td>
+                                            <td class="text-center">
+                                                <span class="status-badge status-{{ $activity->status }}">
+                                                    {{ ucfirst($activity->status) }}
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        @endforeach
+                    @else
+                        <div class="no-data">Tidak ada data activities untuk periode ini</div>
+                    @endif
+                @endif
+
+                <!-- Issues -->
+                @if(in_array('issues', $sections))
+                    <div class="section-title">ISSUES</div>
+                    @if($period->issues->count() > 0)
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="col-no">No</th>
+                                    <th class="col-issue-name">Nama Issue</th>
+                                    <th class="col-location">Lokasi</th>
+                                    <th class="col-equipment">Equipment</th>
+                                    <th class="col-description">Deskripsi</th>
+                                    <th class="col-status">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($period->issues as $issue)
+                                    <tr>
+                                        <td class="text-center">{{ $loop->iteration }}</td>
+                                        <td>{{ $issue->name }}</td>
+                                        <td>{{ $issue->location }}</td>
+                                        <td>{{ $issue->equipment }}</td>
+                                        <td>{{ $issue->description }}</td>
+                                        <td class="text-center">
+                                            <span class="status-badge status-{{ $issue->status }}">
+                                                {{ ucfirst($issue->status) }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    @else
+                        <div class="no-data">Tidak ada issues untuk periode ini</div>
+                    @endif
+                @endif
+            </div>
+        @endforeach
+
+        <!-- Approval Table - Default Table Style -->
+        <table style="width:100%; border-collapse:collapse; margin:30px 0 20px 0; font-size:11px;">
+            <thead>
+                <tr style="background-color:#f8f9fa;">
+                    <th style="border:1px solid #ddd; padding:8px; text-align:center;">APPROVED BY</th>
+                    <th style="border:1px solid #ddd; padding:8px; text-align:center;" colspan="2">CHECKED BY</th>
+                    <th style="border:1px solid #ddd; padding:8px; text-align:center;" colspan="3">TESTED BY</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border:1px solid #ddd; padding:8px; text-align:center; font-style:italic; color:#666;">Project Manager</td>
+                    <td style="border:1px solid #ddd; padding:8px; text-align:center; font-style:italic; color:#666;">Site Manager</td>
+                    <td style="border:1px solid #ddd; padding:8px; text-align:center; font-style:italic; color:#666;">Engineering Manager</td>
+                    <td style="border:1px solid #ddd; padding:8px; text-align:center; font-style:italic; color:#666;">Construction Manager</td>
+                    <td style="border:1px solid #ddd; padding:8px; text-align:center; font-style:italic; color:#666;">Quality Control</td>
+                    <td style="border:1px solid #ddd; padding:8px; text-align:center; font-style:italic; color:#666;">Safety Officer</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid #ddd; padding:8px; height:80px; background:#fafafa;"></td>
+                    <td style="border:1px solid #ddd; padding:8px; height:80px; background:#fafafa;"></td>
+                    <td style="border:1px solid #ddd; padding:8px; height:80px; background:#fafafa;"></td>
+                    <td style="border:1px solid #ddd; padding:8px; height:80px; background:#fafafa;"></td>
+                    <td style="border:1px solid #ddd; padding:8px; height:80px; background:#fafafa;"></td>
+                    <td style="border:1px solid #ddd; padding:8px; height:80px; background:#fafafa;"></td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid #ddd; padding:8px; text-align:center; font-weight:bold; font-size:10px;">( _____________ )</td>
+                    <td style="border:1px solid #ddd; padding:8px; text-align:center; font-weight:bold; font-size:10px;">( _____________ )</td>
+                    <td style="border:1px solid #ddd; padding:8px; text-align:center; font-weight:bold; font-size:10px;">( _____________ )</td>
+                    <td style="border:1px solid #ddd; padding:8px; text-align:center; font-weight:bold; font-size:10px;">( _____________ )</td>
+                    <td style="border:1px solid #ddd; padding:8px; text-align:center; font-weight:bold; font-size:10px;">( _____________ )</td>
+                    <td style="border:1px solid #ddd; padding:8px; text-align:center; font-weight:bold; font-size:10px;">( _____________ )</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Footer -->
+        <div style="margin-top: 20px; text-align: center; font-size: 10px; color: #666; border-top: 1px solid #ddd; padding-top: 10px;">
+            <p>Generated on {{ $generated_at }} WIB | Integrated Project Management System - Project Management System</p>
+        </div>
+    </div>
+    <!-- Word Section End -->
+</body>
+</html>
